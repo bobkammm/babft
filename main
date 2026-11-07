@@ -111,7 +111,7 @@ task.spawn(function()
                     workspace.Gravity = 196.2
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.TheEnd.GoldenChest.Trigger.CFrame
                 end
-                wait(15)
+                wait(19)
             end
             workspace.Gravity = 196.2
         end
