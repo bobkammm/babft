@@ -1,0 +1,122 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+--[[
+local colors = {
+    SchemeColor = Color3.fromRGB(150, 72, 148),
+	Background = Color3.fromRGB(15,15,15),
+    Header = Color3.fromRGB(15,15,15),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+]]
+local Window = Library.CreateLib("BABFT by Kzerix", "RJTheme3")
+local Tab = Window:NewTab("Info")
+local Section = Tab:NewSection("discord.gg/3Vjv9phry")
+Section:NewButton("Copy link", "Copy the link", function()
+    print("")
+end)
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Player")
+Section:NewButton("Reset", "Reset the player", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+Section:NewSlider("Speed", "Speed of the player", 256, 1, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "Jump of the player", 256, 1, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+        game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = false
+        game.Players.LocalPlayer.Character.Humanoid.JumpHeight = s
+end)
+Section:NewButton("Fly", "Fly", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+end)
+local Tab = Window:NewTab("AutoFarm")
+local Section = Tab:NewSection("Farm")
+Section:NewToggle("Auto Farm", "Toggle the Auto farm", function(state)
+    if state then
+        abdilba = 1
+    else
+        abdilba = 0
+        workspace.Gravity = 196.2
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    end
+end)
+
+task.spawn(function()
+    while true do
+        if abdilba == 1 then
+            while abdilba == 1 do
+                workspace.Gravity = 0
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage1.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage2.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage3.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage4.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage5.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage6.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage7.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage8.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage9.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                for i = 1, 5 do
+                    if abdilba == 0 then break end
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.CaveStage10.DarknessPart.CFrame
+                    task.wait(0.4)
+                end
+
+                if abdilba == 1 then
+                    workspace.Gravity = 196.2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.BoatStages.NormalStages.TheEnd.GoldenChest.Trigger.CFrame
+                end
+                wait(15)
+            end
+            workspace.Gravity = 196.2
+        end
+        task.wait(0.1)
+    end
+end)
+local Tab = Window:NewTab("Teleport")
+local Section = Tab:NewSection("Teleport is not working now")
